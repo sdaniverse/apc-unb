@@ -6,7 +6,7 @@ int main() {
     int f1, f2;
     char w1, w2;
 
-    // jogo 1
+    // primeiro jogo
     scanf("%d %d %d", &choice, &p1, &p2);
     if ((p1 + p2) % 2 == choice) {
         w1 = 'A';
@@ -15,7 +15,7 @@ int main() {
         w1 = 'B';
     }
 
-    // jogo 2
+    // segundo jogo
     scanf("%d %d %d", &choice, &p1, &p2);
     if ((p1 + p2) % 2 == choice) {
         w2 = 'C';
