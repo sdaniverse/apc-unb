@@ -4,26 +4,38 @@ int main() {
     int n;
     scanf("%d", &n);
 
-    int vetor[n], soma = 0, media;
-    for (int i = 0; i < n; i++){
+    int vetor[n];
+    long int soma = 0;
+    for (int i = 0; i < n; i++) {
         scanf("%d", &vetor[i]);
         soma += vetor[i];
     }
-    
-    media = soma / n;
+
+    int media = soma / n;
 
     int maior = 0;
     for (int i = 0; i < n; i++) {
         if (vetor[i] > media) {
-            printf("%d ", vetor[i]);
-            maior = 1;
+            maior++;
         }
     }
 
-    if (maior)
-        printf("\n");
-    else
-        printf("0\n");
+    if (!maior) {
+        printf("%d\n", maior);
+    }
+    else {
+        for (int i = 0; i < n; i++) {
+            if (vetor[i] > media) {
+                printf("%d", vetor[i]);
+                maior--;
+
+                if (maior)
+                    printf(" ");
+                else
+                    printf("\n");
+            }
+        }
+    }
 
     return 0;
 }
